@@ -30,7 +30,8 @@ public class CodeGenerator {
         String projectPath = System.getProperty("user.dir");
         //输出文件路径
         //gc.setOutputDir("D://");
-        gc.setOutputDir(projectPath + "/src/main/java");
+
+        gc.setOutputDir(projectPath + "/src/test/java");
         gc.setAuthor("Free");
         gc.setOpen(false);
         gc.setFileOverride(true);

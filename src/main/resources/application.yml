@@ -25,17 +25,29 @@ spring:
 # mybatis-plus相关配置
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
-? global-config:
-??? db-config:
-????? id-type: auto
-????? field-strategy: not_empty
-  ????? #驼峰下划线转换
-????? column-underline: true
-  ????? #逻辑删除配置
-????? logic-delete-value: 0
-????? logic-not-delete-value: 1
-????? db-type: mysql
-??? refresh: false
-? configuration:
-??? map-underscore-to-camel-case: true
-??? cache-enabled: false
+  global-config:
+    id-type: 0
+    db-column-underline: true
+    refresh-mapper: true
+    capital-mode: true
+    field-strategy: 1
+  configuration:
+    cache-enabled: true
+
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+  jedis:
+    pool:
+      max-active: 8
+      max-wait: -1ms
+      max-idle: 500
+      min-idle: 0
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 2MB
