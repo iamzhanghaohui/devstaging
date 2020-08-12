@@ -1,7 +1,8 @@
 package com.free.devquickstart.dao;
 
+
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.free.devquickstart.pojo.UserInfoEntity;
+import com.free.devquickstart.entity.UserInfo;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -12,5 +13,5 @@ import org.springframework.stereotype.Repository;
  * @Version V1.0
  **/
 @Repository
-public interface UserInfoDao extends BaseMapper<UserInfoEntity> {
+public interface UserInfoDao extends BaseMapper<UserInfo> {
 }
